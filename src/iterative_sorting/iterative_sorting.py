@@ -28,8 +28,8 @@ def selection_sort( arr ):
 def bubble_sort( arr ):
     for i in range(len(arr)): # as i goes down
         for j in range(0, len(arr)-i-1): # so does j - avoid hitting the sorted portion of the array
-            if arr[j] > arr[j + 1]:
-                temp = arr[j]
+            if arr[j] > arr[j + 1]: # if the current index is greater than the next index
+                temp = arr[j] # swap them
                 arr[j] = arr[j +1]
                 arr[j +1] = temp
     return arr

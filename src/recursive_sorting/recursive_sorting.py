@@ -1,9 +1,12 @@
-# TO-DO: complete the helpe function below to merge 2 sorted arrays
+# TO-DO: complete the helper function below to merge 2 sorted arrays
 def merge( arrA, arrB ):
     elements = len( arrA ) + len( arrB )
-    merged_arr = [0] * elements
+    merged_arr = [0] * elements # where to push my values into from 2 sorted arrays
     # TO-DO
-    
+    #look at the smallest value in input array
+    #if the value in the first array is less than the second array -> push that value to merger_arr
+    #if the value in the first array is greater than the second array -> push the value of the second array into merger_arr
+    #once one array is drained of values, you can push the remaining values of the other array into merged array since sorted already
     return merged_arr
 
 
