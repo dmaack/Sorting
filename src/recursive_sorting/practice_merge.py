@@ -38,13 +38,29 @@ print(merge(arrA, arrB))
 def merge_sort( arr ):
     if len(arr) <= 1: # base case
         return arr
-    arrA = arr[:len(arr)//2]
-    arrB = arr[len(arr)//2:]
+    arrA = merge_sort(arr[:len(arr)//2])
+    arrB = merge_sort(arr[len(arr)//2:])
     print(arrA, arrB)
-
-    arrA = merge_sort(arrA)
-    arrB = merge_sort(arrB)
+    # arrA = merge_sort(arrA)
+    # arrB = merge_sort(arrB)
     return merge(arrA, arrB)
     # return arr
 
-print(merge_sort([10, 24, 76, 73, 1, 9]))
+print(merge_sort([10, 24, 76, 73, 1, 9, 2]))
+
+
+############## Testing 
+# arr = [10, 24, 76, 73, 1, 9, 2]
+
+# arrA = arr[:len(arr)//2] # split original arr in half
+# arrB = arr[len(arr)//2:]
+
+# arrC = arrA[:len(arrA)//2] # split left arr in half
+# arrD = arrA[len(arrA)//2:]
+
+# arrE = arrB[:len(arrB)//2] # split right arr in half 
+# arrF = arrB[len(arrB)//2:]
+
+# print(arrA, arrB)
+# print(arrC, arrD)
+# print(arrE, arrF)

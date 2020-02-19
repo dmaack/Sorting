@@ -44,11 +44,9 @@ def merge_sort( arr ):
 
     if len(arr) <= 1: # base case
         return arr
-    arrA = arr[:len(arr)//2] 
-    arrB = arr[len(arr)//2:]
+    arrA = merge_sort(arr[:len(arr)//2])
+    arrB = merge_sort(arr[len(arr)//2:])
 
-    arrA = merge_sort(arrA)
-    arrB = merge_sort(arrB)
     return merge(arrA, arrB)
     # return arr
 
