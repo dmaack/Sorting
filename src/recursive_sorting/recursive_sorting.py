@@ -38,8 +38,19 @@ def merge( arrA, arrB ):
 # TO-DO: implement the Merge Sort function below USING RECURSION
 def merge_sort( arr ):
     # TO-DO
+    # break up the unsorted array in half, repeatedly, until you are left with sub arrays with the length of 1 or empty - slice?
+        # use recursion to reach the point of sub arrays of empty or length of 1 == to our base case for recursion rule?
+    # once separated, use the merge function I created above     
 
-    return arr
+    if len(arr) <= 1: # base case
+        return arr
+    arrA = arr[:len(arr)//2] 
+    arrB = arr[len(arr)//2:]
+
+    arrA = merge_sort(arrA)
+    arrB = merge_sort(arrB)
+    return merge(arrA, arrB)
+    # return arr
 
 
 # STRETCH: implement an in-place merge sort algorithm

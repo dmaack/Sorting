@@ -1,3 +1,5 @@
+import math
+
 arrA = [3, 7, 10, 11, 12 , 13]
 arrB = [2, 6, 8]
 
@@ -32,3 +34,17 @@ def merge( arrA, arrB ):
     return merged_arr
 
 print(merge(arrA, arrB))
+
+def merge_sort( arr ):
+    if len(arr) <= 1: # base case
+        return arr
+    arrA = arr[:len(arr)//2]
+    arrB = arr[len(arr)//2:]
+    print(arrA, arrB)
+
+    arrA = merge_sort(arrA)
+    arrB = merge_sort(arrB)
+    return merge(arrA, arrB)
+    # return arr
+
+print(merge_sort([10, 24, 76, 73, 1, 9]))
